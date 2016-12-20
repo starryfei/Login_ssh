@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+
+<struts>
+	<!-- 配置扩展名 -->
+	<package name="struts" extends="struts-default" namespace="/">
+		<action name="login" class="com.action.userAction.UserAction" method="Login">
+			<result name="success">/index.html</result>
+			<result name="error">/register.jsp</result>
+		</action>
+		<action name="register" class="com.action.userAction.UserAction" method="Register">
+			<result name="success">/index.html</result>
+			<result name="failure">/login.html</result>
+		</action>
+	</package>
+</struts>
